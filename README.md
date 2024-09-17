@@ -1,4 +1,5 @@
-# tetris_flet
+# Making a Tetris clone with Python and Flet
+
 ## 1. Install flet & flutter
 https://flet.dev/docs/getting-started/
 
