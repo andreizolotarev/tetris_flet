@@ -1,4 +1,4 @@
-#flet run tetris_flet/main.py --web --port 8888
+#flet run tetris_flet/tetris.py --web --port 8888
 import flet as ft
 import math
 import time
@@ -534,29 +534,7 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.update()
     page.add(Tetris())
-    '''
-    rows=20
-    columns=10
 
-    grid = Grid(rows=rows, columns=columns)
-    tetris_piece = TetrisPiece.create_new_piece(rows=rows, columns=columns, grid=grid)
-    buttons = Buttons(tetris_piece=tetris_piece)
-    view = ft.Column(width=400,
-                     controls=[grid, buttons],
-                     horizontal_alignment=ft.CrossAxisAlignment.CENTER)
-    page.add(view)
-    print('init')
-    grid.color_pixels(tetris_piece=tetris_piece)
-    can_be_played = True
-
-    while can_be_played == True:
-        frame_rate_ms = 400
-        tetris_piece.move_piece(direction='down')
-        can_be_played = grid.have_space()
-        time.sleep(frame_rate_ms/1000)
-        if can_be_played==False:
-            print('stopped')
-    '''
 
 
 if __name__ == "__main__":
